@@ -19,25 +19,29 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  align-items: center;
+  align-items: flex-start; /* Alineación al inicio para que crezca hacia abajo */
   justify-content: center;
   background-color: #1e1e2f;
   color: #f4f4f9;
+  overflow-y: auto; /* Permite el desplazamiento cuando la lista crezca */
 }
 
 .container {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 20px;
   background-color: #2b2b3d;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio constante entre Task List, New Task, y Add Task */
 }
 
 h1 {
   font-size: 2.5em;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #e2e2e2;
 }
 
@@ -46,14 +50,12 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px; /* Espacio constante debajo del formulario */
 }
 
 input[type="text"] {
   width: 100%;
   padding: 12px;
   font-size: 1em;
-  margin-bottom: 15px;
   border: 1px solid #3d3d5c;
   border-radius: 6px;
   background-color: #1e1e2f;
@@ -87,11 +89,12 @@ button:active {
 }
 
 .taskList {
-  margin-top: 20px;
   width: 100%;
-  min-height: 200px; /* Altura mínima para evitar que se mueva hacia arriba */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px; /* Espacio entre la lista de tareas y el botón */
 }
-
 
 .task {
   display: flex;
@@ -100,9 +103,8 @@ button:active {
   padding: 10px;
   background-color: #4e4e6e;
   border-radius: 6px;
-  margin-bottom: 10px;
   color: #f4f4f9;
-  min-height: 50px; /* Altura mínima constante para cada tarea */
+  min-height: 50px;
   box-sizing: border-box;
 }
 
@@ -116,7 +118,7 @@ button:active {
 }
 
 input[type="checkbox"] {
-  margin-right: 10px; /* Espacio fijo entre el checkbox y el texto */
+  margin-right: 10px;
 }
 
 .task button {
@@ -170,3 +172,4 @@ input[type="checkbox"] {
   margin: 0;
   color: #f4f4f9;
 }
+

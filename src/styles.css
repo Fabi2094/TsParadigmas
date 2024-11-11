@@ -1,0 +1,172 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e2f;
+  color: #f4f4f9;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2b2b3d;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e2e2e2;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px; /* Espacio constante debajo del formulario */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  margin-bottom: 15px;
+  border: 1px solid #3d3d5c;
+  border-radius: 6px;
+  background-color: #1e1e2f;
+  color: #f4f4f9;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: #7a7a9f;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  background-color: #646cff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #535bf2;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #4040c1;
+}
+
+.taskList {
+  margin-top: 20px;
+  width: 100%;
+  min-height: 200px; /* Altura mínima para evitar que se mueva hacia arriba */
+}
+
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #4e4e6e;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  color: #f4f4f9;
+  min-height: 50px; /* Altura mínima constante para cada tarea */
+  box-sizing: border-box;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: #7a7a9f;
+}
+
+.task span {
+  flex-grow: 1;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; /* Espacio fijo entre el checkbox y el texto */
+}
+
+.task button {
+  background-color: #e74c3c;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.task button:hover {
+  background-color: #c0392b;
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.credits {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #f4f4f9;
+  font-size: 0.9em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.credits ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credits ul li {
+  margin: 0;
+  color: #f4f4f9;
+}

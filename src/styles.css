@@ -106,7 +106,9 @@ button:active {
   color: #f4f4f9;
   min-height: 50px;
   box-sizing: border-box;
+  width: 100%; /* Asegura que todas las tareas ocupen el mismo ancho */
 }
+
 
 .task.completed span {
   text-decoration: line-through;
@@ -115,7 +117,12 @@ button:active {
 
 .task span {
   flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%; /* Ajusta el ancho para dejar espacio a los botones */
 }
+
 
 input[type="checkbox"] {
   margin-right: 10px;

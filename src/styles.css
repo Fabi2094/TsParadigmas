@@ -19,11 +19,11 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  align-items: flex-start; /* Alineación al inicio para que crezca hacia abajo */
+  align-items: flex-start; 
   justify-content: center;
   background-color: #1e1e2f;
   color: #f4f4f9;
-  overflow-y: auto; /* Permite el desplazamiento cuando la lista crezca */
+  overflow-y: auto; 
 }
 
 .container {
@@ -35,7 +35,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espacio constante entre Task List, New Task, y Add Task */
+  gap: 20px; 
 }
 
 h1 {
@@ -93,7 +93,7 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 20px; /* Espacio entre la lista de tareas y el botón */
+  margin-top: 20px; 
 }
 
 .task {
@@ -172,4 +172,19 @@ input[type="checkbox"] {
   margin: 0;
   color: #f4f4f9;
 }
+
+
+.priorityInput {
+  margin-left: 50px;
+}
+
+
+.task-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 

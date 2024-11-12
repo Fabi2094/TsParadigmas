@@ -1,21 +1,23 @@
 import React from "react";
-import { Task } from "./Task";
+import { Task } from "./Task.tsx";
+import { iTask } from "./ToDo";
 
 type TaskListProps = {
-    taskList: { task: string; completed: boolean }[];
+    taskList: iTask[];
     deleteTask: (index: number) => void;
     toggleTaskComplete: (index: number) => void;
+    toggleTaskPriority: (index: number) => void;
 };
 
-export const TaskList = ({ taskList, deleteTask, toggleTaskComplete }: TaskListProps) => {
+export const TaskList = ({ taskList, deleteTask, toggleTaskComplete, toggleTaskPriority }: TaskListProps) => {
     return (
         <div className="taskList">
-            {taskList.map((task, index) => (
+            {taskList.map((task: iTask, index: number) => (
                 <Task 
                     key={index} 
-                    task={task.task} 
-                    completed={task.completed}
+                    task={task}
                     toggleComplete={() => toggleTaskComplete(index)} 
+                    toggleTaskPriority={() => toggleTaskPriority(index)} 
                     deleteTask={() => deleteTask(index)} 
                 />
             ))}
